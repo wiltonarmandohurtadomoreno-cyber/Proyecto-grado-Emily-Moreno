@@ -1,0 +1,113 @@
+<main class="container my-5">
+    <div class="content-card">
+        <div class="row align-items-center g-4">
+
+            <!-- Texto -->
+            <div class="col-md-8">
+                <h2 class="section-title">Resumen</h2>
+                <div class="resumen-texto">
+                    <p>
+                        El consumo de vapeadores entre los adolescentes es una preocupación para la salud, ya que
+                        estos dispositivos pueden contener nicotina y otras sustancias perjudiciales que generan
+                        dependencia y afectan el organismo. Factores como la curiosidad, la presión social, la
+                        influencia de las amistades, las redes sociales y los sabores llamativos pueden motivar su
+                        consumo.
+                    </p>
+                    <p>
+                        Por esta razón, este proyecto busca prevenir el uso del vaper en los estudiantes de grado once
+                        del Gimnasio Santander, mediante actividades educativas y dinámicas que informen sobre sus
+                        riesgos, fomenten el autocuidado y promuevan la toma de decisiones responsables.
+                    </p>
+                </div>
+
+                <div class="palabras-clave">
+                    <strong>Palabras clave:</strong>
+                    <span>Enfermedades cancerígenas</span>
+                    <span>vaper</span>
+                    <span>Vida saludable</span>
+                    <span>Presión social</span>
+                   
+                </div>
+            </div>
+
+
+          
+            <!-- Imagen -->
+            <div class="col-md-4 text-center">
+                <svg class="img-resumen" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Ilustración de unos pulmones protegidos por un escudo">
+                    <circle cx="110" cy="110" r="105" fill="#eef6ff" />
+                    <!-- Tráquea y bronquios -->
+                    <rect x="104" y="30" width="12" height="55" rx="6" fill="#e07a8a" />
+                    <path d="M110 80 L92 100 M110 80 L128 100" stroke="#e07a8a" stroke-width="8"
+                        stroke-linecap="round" fill="none" />
+                    <!-- Pulmón izquierdo -->
+                    <path d="M98 65 C68 60 42 95 42 140 C42 172 58 184 78 182 C94 180 100 168 100 152 Z"
+                        fill="#f4a3b1" />
+                    <!-- Pulmón derecho -->
+                    <path d="M122 65 C152 60 178 95 178 140 C178 172 162 184 142 182 C126 180 120 168 120 152 Z"
+                        fill="#f4a3b1" />
+                    <!-- Detalles -->
+                    <path d="M62 120 Q75 112 84 124 M60 150 Q72 142 82 154" stroke="#e07a8a" stroke-width="4"
+                        fill="none" stroke-linecap="round" />
+                    <!-- Escudo -->
+                    <path d="M160 128 L190 138 L190 160 C190 178 176 190 160 196 C144 190 130 178 130 160 L130 138 Z"
+                        fill="#198754" stroke="#fff" stroke-width="4" />
+                    <path d="M146 162 L157 173 L175 151" stroke="#fff" stroke-width="7" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="img-texto-verde">Cuida tus pulmones</p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<style>
+    .resumen-texto {
+    background: #eef6ff;
+    border-left: 6px solid #a34c93;
+    border-radius: 10px;
+    padding: 1.1rem 1.4rem;
+}
+
+.resumen-texto p {
+    text-align: justify;
+    color: #1a3a5c;
+    line-height: 1.7;
+}
+
+.resumen-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.palabras-clave {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.palabras-clave span {
+    background: #aa377e;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 20px;
+}
+
+.img-resumen {
+    width: 100%;
+    max-width: 240px;
+    filter: drop-shadow(0 6px 14px rgba(25, 135, 84, 0.18));
+}
+
+.img-texto-verde {
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: #198754;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+</style>

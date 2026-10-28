@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo educativo para la prevención del uso del vaper en estudiantes de grado once del Gimnasio Santander.">
+    <title>Prevención del vapeo | Aplicativo educativo</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PANTALLA DE INICIO DE SESIÓN
+         ===================================================== -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+
+            <h1 class="text-title text-center mb-4">Bienvenido</h1>
+            <p class="text-center text-login">PREVENCIÓN DEL USO DEL VAPER EN ESTUDIANTES</p>
+
+            <div class="text-center">
+                <img src="img/logo.png" width="200" height="200" alt="Logo del proyecto de prevención del vapeo"
+                    class="img-logo-login">
+            </div>
+
+            <form id="formLogin">
+                <label for="inputNombre" class="visually-hidden">Nombre</label>
+                <input type="text" id="inputNombre" class="form-control mb-3" placeholder="Ingrese su nombre"
+                    autocomplete="off" required>
+                <button type="submit" class="btn-temas w-100">Ingresar</button>
+            </form>
+
+            <div id="alertContainer"></div>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         CONTENIDO DE LA APLICACIÓN
+         ===================================================== -->
+    <div id="appContent" style="display: none;">
+
+        <!-- ---------- Encabezado y menú ---------- -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+                <div class="container">
+
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="javascript:cargarpagina('inicio.html')">
+                        <img src="img/logo.png" class="logo" alt="Inicio">
+                    </a>
+
+                    <!-- Botón del menú en celulares -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false"
+                        aria-label="Mostrar navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menú -->
+                    <div class="collapse navbar-collapse" id="menuNavegacion">
+                        <ul class="navbar-nav ms-auto">
+
+                            <!-- Contexto -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Contexto</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('Planteamientodelproblema.html')">Planteamiento del problema</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('Objetivos.html')">Objetivos</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('Resumen.html')">Resumen</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('marco.html')">Marco de referencia</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Ruta del proyecto -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Ruta del proyecto</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('introduccion.html')">Introducción</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('justificacion.html')">Justificación</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('evidencias.html')">Evidencias</a></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('conclusiones.html')">Conclusiones</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="javascript:cargarpagina('Documento.html')">Documento</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Actividades -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:cargarpagina('actividades.html')">Actividades</a>
+                            </li>
+
+                            <!-- Juego -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:cargarpagina('juego.html')">Juego</a>
+                            </li>
+
+                            <!-- Créditos -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:cargarpagina('Creditos.html')">Créditos</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <!-- ---------- Aquí se cargan las páginas ---------- -->
+        <main id="contenido"></main>
+
+        <!-- ---------- Pie de página ---------- -->
+        <footer class="footer-pastel text-center py-4 mt-5">
+            <img src="img/logo-gst.png" alt="Escudo del Gimnasio Santander" class="img-logo mb-2">
+            <p class="mb-1">© <span id="year"></span> Colegio Gimnasio Santander de Tunja. Todos los derechos reservados.</p>
+            <p class="mb-0">Autora: Emily Alejandra Moreno Torres</p>
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS personalizado -->
+    <script src="js/main.js"></script>
+
+    <!-- Cierra el menú en celulares después de elegir una opción -->
+    <script>
+        document.querySelectorAll('#menuNavegacion .dropdown-item, #menuNavegacion .nav-link:not(.dropdown-toggle)')
+            .forEach(function (enlace) {
+                enlace.addEventListener('click', function () {
+                    var menu = document.getElementById('menuNavegacion');
+                    if (menu.classList.contains('show')) {
+                        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                    }
+                });
+            });
+    </script>
+
+</body>
+
+</html>

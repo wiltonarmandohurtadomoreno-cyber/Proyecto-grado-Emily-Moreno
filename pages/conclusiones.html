@@ -1,0 +1,182 @@
+
+
+<main class="container my-5">
+    <div class="content-card">
+        <h2 class="section-title">Conclusiones</h2>
+        <section>
+      <h2>Fases de la intervención</h2>
+      <div class="fases">
+        <div class="fase">
+          <div class="numero">1</div>
+          <div>
+            <h3>Diagnóstico</h3>
+            <p>Se aplicó un cuestionario inicial a 19 estudiantes de grado once para identificar sus
+            conocimientos, dudas y percepciones sobre el vaper, lo que evidenció la necesidad de
+            fortalecer la prevención.</p>
+          </div>
+        </div>
+        <div class="fase">
+          <div class="numero">2</div>
+          <div>
+            <h3>Información</h3>
+            <p>Se realizaron espacios de orientación sobre los efectos del vapeo en la salud, los
+            riesgos de la nicotina y la dependencia, para generar conciencia y promover decisiones
+            informadas.</p>
+          </div>
+        </div>
+        <div class="fase">
+          <div class="numero">3</div>
+          <div>
+            <h3>Actividades educativas</h3>
+            <p>Se desarrollaron de forma participativa y dinámica:</p>
+            <div class="actividades">
+              <span>Charla informativa</span>
+              <span>Actividades de prevención</span>
+              <span>Juego "Verdad o mito"</span>
+              <span>Campaña de sensibilización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Resultados</h2>
+      <p>La comparación del cuestionario antes y después mostró cambios positivos. Por ejemplo, en la
+      pregunta 2 las respuestas afirmativas pasaron de 12 a 19:</p>
+      <div class="barra-fila">
+        <div class="barra-etiqueta"><span>Antes de la intervención</span><strong>12 de 19</strong></div>
+        <div class="barra"><div class="relleno antes"></div></div>
+      </div>
+      <div class="barra-fila">
+        <div class="barra-etiqueta"><span>Después de la intervención</span><strong>19 de 19</strong></div>
+        <div class="barra"><div class="relleno despues"></div></div>
+      </div>
+      <p class="nota">Esto refleja un mayor conocimiento de los estudiantes tras la intervención.</p>
+    </section>
+
+    <section class="conclusion">
+      <h2>Conclusión</h2>
+      <p>La educación preventiva en la escuela es una herramienta clave para aclarar dudas, promover
+      el pensamiento crítico, las decisiones responsables y los hábitos saludables frente al vapeo.</p>
+    </section>
+
+  </div>
+    </div>
+</main>
+
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prevención del Vapeo</title>
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #4b5563;
+    --accent: #0f766e;
+    --accent-soft: #e0f5f1;
+    --warn: #b45309;
+    --warn-soft: #fff4e0;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+ 
+  .contenedor {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 16px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+    color: var(--accent);
+  }
+  header p { margin: 0; color: var(--muted); }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  section h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--accent);
+  }
+  .fases {
+    display: grid;
+    gap: 16px;
+  }
+  .fase {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .numero {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fase h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .fase p { margin: 0; color: var(--muted); }
+  .actividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .actividades span {
+    background: #fff;
+    border: 1px solid #99d6cc;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 0.9rem;
+  }
+  .barra-fila { margin-bottom: 14px; }
+  .barra-etiqueta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .barra {
+    height: 24px;
+    background: #eef2f7;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .relleno { height: 100%; border-radius: 6px; }
+  .antes { background: #94a3b8; width: 63.2%; }
+  .despues { background: var(--accent); width: 100%; }
+  .nota { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+  .conclusion {
+    background: var(--warn-soft);
+    border-left: 6px solid var(--warn);
+  }
+  .conclusion h2 { color: var(--warn); }
+  .conclusion p { margin: 0; font-weight: 600; }
+</style>
+</head>
+
+
+
